@@ -1,16 +1,65 @@
 <html>
 <head>
+<title>muiclac's Channel</title>
+<meta name="keywords" content="muiclac">
+<meta name="discription" content="a personal website">
+<base href="muiclac.github.io/index.html">
+<base target="_blank">
 <style>
+a:visited{
+    color:9370D8;
+}
+a:hover{
+    color:87CEFA;
+}
 body{
-     background-color:FAEBD7;
+    background-img:background.bmp;
+    background-attachment:fixed;
 }
 h2{
-    text-align:left;
+    text-align:left
 }
 h3{
-    text-align:center;
+    text-align:center
 }
-div{
+#contact1{
+    font-size:16px;
+    color:000000;
+    text-align:right;
+    padding: 0px 400px 0px 0px
+}
+
+#link1{
+    align:right；
+    hight:20px；
+    width:20px；
+}
+#menu1{
+    max-width:9999px;
+    margin:auto;
+    hight:140px;
+    background-color:E9FFFF;
+}
+#web1{
+    color:D0FFFF;
+    background-color:E6E6FA;    
+    padding:30px 50px 30px 50px;
+    margin:30px 0px 20px 0px    
+    border:2px soild E0FFFF;
+    text-align:left;
+    font-size:20px
+}
+#context1{
+    border-style:soild;
+    border-width:2px;
+    border-color:ADD8E6;
+    background-color:E0FFFF;
+    max-width:1080px;
+    width:auto;
+    float:right;
+    margin: 0px 30px 20px 30px
+}
+#board1{
     background-color:FFFAFA;
     background-image:url("ice_crystal.bmp");
     background-repeat:no-repeat
@@ -18,12 +67,13 @@ div{
     border:groove;
     border-color:000000;
     border-radius:12px;
-    margin-left:40px;
-    margin-right:40px;
-    margin-top:30px;
-    margin-bottom:50px;
+    margin:30px 100px 20px 100px
+    hight:300px;
+    max-width:1500px;
+    width:auto;
+    float:center;
 }
-#board1{
+#announcement1{
     text-align:center;
     font-size:12px;
 }
@@ -32,42 +82,71 @@ div{
     text-align:right;
     text-direction:rtl;
 }
+div.static{
+    position:static
+}
+div.absolute{
+    position:absolute;
+    left:0;
+}
 </style>
 </head>
 <body>
-<!--把theme.txt复制到html中-->
-<h2>欢迎来到muiclac的个人网站</h2>
-<p style="font-size:24px">    您好，我是muclac。<br />
-    我是一个音乐爱好者，音游玩家，半吊子谱师的高中生,爱好是喜欢读书，绘画，打电动。</p>
-<!--  放屁，他爱好这么多，才怪了 -->
-<hr />
-<div>
+<div id="menu1" class="static">
+  <div>
+    <h3>欢迎来到muiclac的主页</h3>
+    <a id="link1" href="https://space.bilibili.com/527533872">
+        <img src="bilibili.bmp" alt="B站空间"  align="right" align="top" hight="20px" width="20px">
+    </a>
+    <a id="link1" href="mailto : muiclac@126.com?subject=hello">
+        <img src="envelop,bmp" alt="联系我" align="right" align="top" hight="20px" width="20px">
+    </a>
+    <p id="contact1" class="absolute">联系我：muiclac@126.com</p>
+  </div>
+<div id="board1">
   <h3>公告板</h3>
-    <p id="board1"><blockquote>改善和调整网站样貌，现在已支持资源的下载。<br/>现在已支持BMS谱面的下载和资源页面跳转。<br/></blockquote></p>
+    <p id="announcement1">
+        <blockquote>先祝贺您2023年新年快乐
+        <br/>现在已经支持博客空间，快来看看他写的
+                <a href="blog/blog.html" target="_top">文章
+                </a>吧！
+        <br/>
+        今年将会有中国PMS制作大赛1-3月的季赛，可能会在春节时期开始进行。
+        </blockquote>
+    <!-- 一块公告版 -->
+    </p>
     <br/>
-    <p id="date1">2022/12/22</p>
-    </div>
-    <!-- 全新样式的公告板一上线，12月25日换成雪白色和蓝色风格 -->
+    <p id="date1">2022/01/01</p>
+</div>
 <hr/>
+  <div class="absolute" id="web1">
+    <a href="/index.html">主页</a><br/><br/>
+    <a href="blog/blog.html">博客空间</a><br/><br/>
+    <a href="download/sourse.html">公开资源</a><br/><br/>
+    <a href="download/chart.html">谱面下载</a><br/><br/>
+    <a href="music/music.html">音乐下载</a><br/><br/>
+    <a href="event/list.html">BMS活动</a><br/>
+  </div>
+</div>
 
-<h2>链接库</h2>
-<a href="https://space.bilibili.com/527533872" target="_blank">
-<img src="television.bmp" alt="我的B站空间"  align="right"
-width="50" highth="50"/>
-<a href="https://muiclac.github.io/download.html" target="_top">
-<img src="download.bmp" alt="资源下载"  align="right"
-width="50" highth="50"/>
-<p><a href="">历史博客</a><br/>
-
-<a href="https://muiclac.github.io/history.html" target="_top">网站历史</a><br/>
-</a></p>
-<hr />
-<h2>联系我
-<img src="envelope.bmp" width="40" highth="40"  align="left"/></h2>
-<p style="text-size:20px"><br/><br/>
-418533564@qq.com<br/>
-four18533564@163.com<br/>
-muiclac@126.com</p>
-
+<div id="context1">
+  
+  <h2>我是谁？</h2>
+  <p>大家好，我是muiclac，一个主要以techno和synth为风格创作音乐的高中生曲师</p>
+    <br/><h3>我的爱好</h3>
+    <br/><p>我喜欢读书，绘画和音乐等爱好。</p>
+    <!--  放屁，他爱好这么多，才怪了 -->
+    <br/><p>在读书和写作方面，我会时不时读一读小说，构筑起幻想出来的精彩绝伦的故事史诗和宏伟的世界。通过不断的阅读一本本书，我也能够独自刻画出属于自己的世界和故事，我会在自己的博客空间上发表自己的文章，发表出我自己的个人观点。
+    <br/>在绘画和模型方面，我也会陆续地绘画出自己的角色，他们有着自己的故事，可以使用这些角色的模型来进行二次创作和进行直播和视频制作。绘画的图片和人物模型可以在资源下载中进行下载。</p>
+    <br/><p>在音乐方面，我比较喜欢听东方的曲目以及GroundBreaking活动中的曲目，他们也有着各自的故事，我也会用自己的设备上面的软件来进行谱写歌曲，并在网站上面进行公开。也会时不时举办各类活动。</p>
+    <br/>
+    <p>在游戏方面，我也是有着极大的兴趣，我游玩的范围也很广泛。我目前比较喜欢游玩音乐游戏和沙盒类游戏。</p>
+    <br/><p>在音乐游戏上，我主要游玩4K和7K及其7+1K和9K的音乐游戏。4K音游大概在5dan左右，7和7+1K音游在发狂六段水平，osu！ mania的
+        <a href="https://osu.ppy.sh/users/24950026" target="_blank">pp</a>
+        <!--游戏水平真的很差，和tyrcs比较来说很差-->
+    表现分约1600左右。9K方面，我作为一个完全的新人，继承在我游玩7K音游的基础上，现在正在熟悉键位配置，并进行寻找PMS段位认定的曲目资源和家用机的资源。
+    <!--七段when?  发狂when?-->
+    在谱面制作方面，我主要制作7+1K谱面和9K谱面，我也会在自己的网站上面进行公开。在谱面的另一个方面，在质量方面，我作为一个新人谱面编辑者，我的技术和制作水平不算优秀，在谱面制作上，我存在着严重的不足。在谱面里，会有大量的奇怪的配置，让人感觉到打击感差的现象。我也会多加练习，提高自己的水平。在曲目编写方面，我也是感兴趣的。幸运的是，我在我的设备里面有能够独立进行制作BMS的乐曲，谱面，影像的所有软件，我也会自己制作乐曲进行公开。<p/>
+    <br/><p>我作为一个高中生，也是很忙碌的，每天学习知识，虽然每天都是很劳累的，但是每天也过得很充实，我也会为了实现自己的梦想而努力和奋斗，我在爱好方面的梦想也仅仅是我的梦想的一部分。我也会在着高中和大学的几年时间里学习到自己作为一个人的意义，我自己学习是为了什么，我对于我学习到的知识的运用。我也会把我学习到的知识运用到自己的生活和爱好中。</p>
+</div>
 </body>
-</html>
