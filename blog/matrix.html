@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Matrix Operations</title>
+<style>
+    /* 简单的样式 */
+    body { font-family: Arial, sans-serif; margin: 20px; }
+    input[type="text"] { width: 100px; margin: 5px; }
+    button { margin: 5px; }
+    textarea { width: 100%; height: 100px; margin-top: 10px; }
+</style>
+</head>
+<body>
+<h1>简单的矩阵计算器</h1>
+<h2>输入格式：</br>
+    数字，数字，……<br>
+    数字，数字，……<br>
+    …………
+</h2>
+</hr>
+
+<!-- 输入矩阵 -->
+<div>
+    <label for="matrixA">矩阵A:</label>
+    <textarea id="matrixA" rows="4" cols="50"></textarea>
+</div>
+<div>
+    <label for="matrixB">矩阵B:</label>
+    <textarea id="matrixB" rows="4" cols="50"></textarea>
+</div>
+
+<!-- 选择运算类型 -->
+<div>
+    <label for="operation">计算类型:</label>
+    <select id="operation">
+        <option value="add">加法</option>
+        <option value="subtract">减法</option>
+        <option value="scalarMultiply">标量乘法</option>
+        <option value="multiply">矩阵乘法</option>
+        <option value="transpose">转置</option>
+        <!-- 注意：求逆操作需要更复杂的验证和处理，这里不实现 -->
+    </select>
+</div>
+
+<!-- 标量乘法输入 -->
+<div id="scalarInput" style="display:none;">
+    <label for="scalar">表量:</label>
+    <input type="number" id="scalar" step="any">
+</div>
+
+<!-- 输出结果 -->
+<div>
+    <label for="result">结果:</label>
+    <textarea id="result" rows="4" cols="50" readonly></textarea>
+</div>
+
+<!-- 执行运算按钮 -->
+<button onclick="performOperation()">计算</button>
+
+<script>
+// 辅助函数：解析矩阵字符串为二维数组
+function parseMatrix(str) {
+    return str.split('\n').map(row => row.split(',').map(Number));
+}
+
+// 辅助函数：将二维数组格式化为矩阵字符串
+function formatMatrix(matrix) {
+    return matrix.map(row => row.join(',')).join('\n');
+}
+
+// 矩阵加法
+function matrixAdd(A, B) {
+    return A.map((row, i) => row.map((val, j) => val + B[i][j]));
+}
+
+// 矩阵减法
+function matrixSubtract(A, B) {
+    return A.map((row, i) => row.map((val, j) => val - B[i][j]));
+}
+
+// 标量乘法
+function scalarMultiply(A, scalar) {
+    return A.map(row => row.map(val => val * scalar));
+}
+
+// 矩阵乘法
+function matrixMultiply(A, B) {
+    const [m1, n1] = [A.length, A[0].length];
+    const [m2, n2] = [B.length, B[0].length];
+    if (n1 !== m2) throw new Error('Matrices dimensions do not match for multiplication');
+    const result = Array.from({ length: m1 }, () => Array(n2).fill(0));
+    for (let i = 0; i < m1; i++) {
+        for (let j = 0; j < n2; j++) {
+            for (let k = 0; k < n1; k++) {
+                result[i][j] += A[i][k] * B[k][j];
+            }
+        }
+    }
+    return result;
+}
+
+// 矩阵转置
+function matrixTranspose(A) {
+    return A[0].map((_, colIndex) => A.map(row => row[colIndex]));
+}
+
+// 执行运算函数
+function performOperation() {
+    const matrixA = parseMatrix(document.getElementById('matrixA').value);
+    const matrixB = document.getElementById('matrixB').value ? parseMatrix(document.getElementById('matrixB').value) : null;
+    const operation = document.getElementById('operation').value;
+    let result, scalar;
+
+    switch (operation) {
+        case 'add':
+            if (!matrixB) throw new Error('Matrix B is required for addition');
+            result = matrixAdd(matrixA, matrixB);
+            break;
+        case 'subtract':
+            if (!matrixB) throw new Error('Matrix B is required for subtraction');
+            result = matrixSubtract(matrixA, matrixB);
+            break;
+        case 'scalarMultiply':
+            scalar = parseFloat(document.getElementById('scalar').value);
+            if (isNaN(scalar)) throw new Error('Invalid scalar value');
+            result = scalarMultiply(matrixA, scalar);
+            break;
+        case 'multiply':
+            if (!matrixB) throw new Error('Matrix B is required for multiplication');
+            result = matrixMultiply(matrixA, matrixB);
+            break;
+        case 'transpose':
+            result = matrixTranspose(matrixA);
+            break;
+        default:
+            throw new Error('Unknown operation');
+    }
+
+    document.getElementById('result').value = formatMatrix(result);
+}
+
+// 根据选择的运算类型显示或隐藏标量输入
+document.getElementById('operation').addEventListener('change', function() {
+    const scalarInput = document.getElementById('scalarInput');
+    if (this.value === 'scalarMultiply') {
+        scalarInput.style.display = 'block';
+    } else {
+        scalarInput.style.display = 'none';
+    }
+});
+
+</script>
+
+</body>
+</html>
