@@ -1,91 +1,66 @@
-<html>
+<!DOCTYPE html>
+<html lang="cn">
 <head>
-<title>muiclac's Channel</title>
-<meta name="keywords" content="muiclac">
-<meta name="discription" content="a personal website">
-<base href="muiclac.github.io/index.html">
-<base target="_blank">
-<style>
+    <meta charset="UTF-8">
+    <meta name="keywords" content="muiclac">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constellation's Station</title>
+    <base href="muiclac.github.io/index.html">
+    <base target="_blank">
+    <style>
+
+.active{
+    background-color: antiquewhite;
+}
 a:visited{
     color:9370D8;
 }
 a:hover{
     color:87CEFA;
 }
-body{
-    background-img:background.bmp;
-    background-attachment:fixed;
+#title1{
+text-align: center;
+align-self: auto;
 }
-h2{
-    text-align:left
+#subTitle1{
+    text-align: right;
+    align-self: auto;
 }
-h3{
-    text-align:center
-}
-li{
-    display: inline;
-    font-size: 24px;
-    margin:5px 30px 5px 40px
-}
-#contact1{
-    font-size:16px;
-    color:000000;
-    text-align:right;
-    padding: 0px 400px 0px 0px
-}
-
-#link1{
-    align:right;
-    hight:20px;
-    width:20px;
-}
-#menu1{
-    max-width:9999px;
-    margin:auto;
-    hight:140px;
-    background-color:E9FFFF;
-}
-#web1{
-    color:D0FFFF;
-    background-color:E6E6FA;    
-    padding:20px 30px 20px 20px;
-    margin:auto;    
-    border:2px soild E0FFFF;
-    text-align:left;
-    max-width:9999px;
+#head1{
+    background-color: rgba(180, 255, 255, 0.229);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px ;
+    margin-left: 100px;
+    margin-right: 100px;
+    border: groove;
+    border-radius: 20px;
 
 }
-#context1{
-    border-style:soild;
-    border-width:2px;
-    border-color:ADD8E6;
-    background-color:E0FFFF;
-    max-width:1080px;
-    width:auto;
-    margin: 100px 30px 20px 30px
+#bottom1{
+background-color: rgb(63, 63, 63);
+padding-top: 5px;
+padding-bottom: 5px;
+
 }
-#board1{
-    background-color:FFFAFA;
-    background-image:url("ice_crystal.bmp");
-    background-repeat:no-repeat;
-    background-place:right bottom;
-    border:groove;
-    border-color:000000;
-    border-radius:12px;
-    margin:30px 100px 20px 100px;
-    hight:300px;
-    max-width:1500px;
-    width:auto;
-    float:center;
+#sub1{
+    text-align: center;
+    color: rgb(136, 136, 136);
 }
-#announcement1{
-    text-align:center;
-    font-size:12px;
+#main1{
+    background-color: rgba(180, 255, 255, 0.229);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px ;
+    border: groove;
+    margin-left: 100px;
+    margin-right: 100px;
+    border-radius: 20px;
 }
-#date1{
-    font-size:8px;
-    text-align:right;
-    text-direction:rtl;
+div{
+
+    align-self: auto;
+    min-width: 300px;
 }
 div.static{
     position:static
@@ -94,75 +69,89 @@ div.absolute{
     position:absolute;
     left:0;
 }
+body{
+    background-image: url("/source/back1.jpg") ;
+    background-attachment: fixed;
+}
+li{
+    display: inline;
+}
+#category1{
+    border: groove;
+    background-color: rgb(193, 250, 250);
+    border-radius: 20px;
+}
+#direction1{
+    align-self: center;
+    font-size: 20px;
+    background-color: rgb(255, 255, 255);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 20px; 
+}
+#first1{
+font-size: large;
+
+}
+h2{
+    text-align: center;
+}
+
 </style>
 </head>
 <body>
-<div id="menu1" class="static">
-  <div>
-    <h3>欢迎来到muiclac的主页</h3>
-    <a id="link1" href="https://space.bilibili.com/527533872">
-        <img src="bilibili.bmp" alt="B站空间"  align="right" align="top" hight="20px" width="20px">
-    </a>
-    <a id="link1" href="mailto : muiclac@126.com?subject=hello">
-        <img src="envelop,bmp" alt="联系我" align="right" align="top" hight="20px" width="20px">
-    </a>
-    <a id="link1" href="https://discord.com/channels/@me" onclick="say()" target="_blank">
-        <img src="discord.bmp" alt="discord空间" align="right" align="top" hight="20px" width="20px">
-        <script>
-        function say(){
-            alert('contect me muiclac#2677');
-        }
-        </script>
-    </a>
-    <p id="contact1" class="absolute">联系我：muiclac@126.com</p>
-  </div>
-<div id="board1">
-  <h3>公告板</h3>
-    <p id="announcement1">
-        <blockquote>先祝贺您2023年春节快乐
-        <br/>现在已经支持博客空间，快来看看他写的
-                <a href="blog/blog.html" target="_top">文章
-                </a>吧！
-        <br/>现在已开放音乐界面和活动界面
-        <br/>
-        高考加油，目标985院校!!
-        </blockquote>
-    <!-- 一块公告版 -->
-    </p>
-    <br/>
-    <p id="date1">2023/01/18</p>
-</div>
-<hr/>
-</div>
-</div>
-<div id="web1">
-    <ul>
-      <li><a href=“https://muiclac.github.io/index.html” target="_top">  主页  </a></li>
-      <li><a href="https://muiclac.github.io/blog/blog.html" target="_top">  博客空间  </a></li>
-      <li><a href="https://muiclac.github.io/download/sourse.html">  公开资源  </a></li>
-      <li><a href="https://muiclac.github.io/download/chart.html">  谱面下载  </a></li>
-      <li><a href="https://muiclac.github.io/music/music.html">  音乐下载  </a></li>
-      <li><a href="https://muiclac.github.io/event/list.html" target="_top">  BMS活动  </a></li>
+    <div id="category1">
+<ul>
+    <li id="direction1"> <a href="index.html">主页</a></li>
+    <li id="direction1"> <a href="music/music.html">音乐</a></li>
+    <li id="direction1"> <a href="download/chart.html">谱面</a></li>
+    <li id="direction1"> <a href="blog/blog.html">博客</a></li>
+    <li id="direction1"> <a href="link/link.html">链接库</a></li>
+    <li id="direction1"> <a href="event/event.html">活动</a></li>
     </ul>
-</div>
-  <div id="context1">
-  
-    <h2>我是谁？</h2>
-    <p>大家好，我是muiclac，一个主要以techno和DnB风格创作音乐的高中生曲师</p>
-      <br/><h3>我的爱好</h3>
-      <br/><p>我喜欢读书，绘画和音乐等爱好。</p>
-      <!--  放屁，他爱好这么多，才怪了 -->
-      <br/><p>在读书和写作方面，我会时不时读一读小说，构筑起幻想出来的精彩绝伦的故事史诗和宏伟的世界。通过不断的阅读一本本书，我也能够独自刻画出属于自己的世界和故事，我会在自己的博客空间上发表自己的文章，发表出我自己的个人观点。
-      <br/>在绘画和模型方面，我也会陆续地绘画出自己的角色，他们有着自己的故事，可以使用这些角色的模型来进行二次创作和进行直播和视频制作。绘画的图片和人物模型可以在资源下载中进行下载。</p>
-      <br/><p>在音乐方面，我比较喜欢听东方的曲目以及GroundBreaking活动中的曲目，他们也有着各自的故事，我也会用自己的设备上面的软件来进行谱写歌曲，并在网站上面进行公开。也会时不时举办各类活动。</p>
-      <br/>
-      <p>在游戏方面，我也是有着极大的兴趣，我游玩的范围也很广泛。我目前比较喜欢游玩音乐游戏和沙盒类游戏。</p>
-      <br/><p>在音乐游戏上，我主要游玩4K和7K及其7+1K和9K的音乐游戏。4K音游大概在5dan左右，7和7+1K音游在发狂六段水平，osu！ mania的
-          <a href="https://osu.ppy.sh/users/24950026" target="_blank">pp</a>
-          <!--游戏水平真的很差，和tyrcs比较来说很差-->
-      表现分约2400左右。9K方面，我作为一个完全的新人，继承在我游玩7K音游的基础上，现在是发狂初段，并进行寻找PMS段位认定的曲目资源。
-      <!--七段when?  发狂when?-->
-      在谱面制作方面，我主要制作7+1K谱面和9K谱面，我也会在自己的网站上面进行公开。在谱面的另一个方面，在质量方面，我作为一个新人谱面编辑者，我的技术和制作水平不算优秀，在谱面制作上，我存在着严重的不足。在谱面里，会有大量的奇怪的配置，让人感觉到打击感差的现象。我也会多加练习，提高自己的水平。在曲目编写方面，我也是感兴趣的。幸运的是，我在我的设备里面有能够独立进行制作BMS的乐曲，谱面，影像的所有软件，我也会自己制作乐曲进行公开。<p/>
-      <br/><p>我作为一个高中生，也是很忙碌的，每天学习知识，虽然每天都是很劳累的，但是每天也过得很充实，我也会为了实现自己的梦想而努力和奋斗，我在爱好方面的梦想也仅仅是我的梦想的一部分。我也会在着高中和大学的几年时间里学习到自己作为一个人的意义，我自己学习是为了什么，我对于我学习到的知识的运用。我也会把我学习到的知识运用到自己的生活和爱好中。</p>
-  </div>
+    </div>
+</br>
+
+    <div id="head1">  
+
+        <h1 id="title1">Constellation's Station</h1>
+        <h3 id="subTitle1">音乐，谱面，视频的站点</h3>
+    
+    </div>
+    </br>
+
+    <div id="main1">
+<p id="first1">你好，我是Constellation</p>
+<h2>引言</h2>
+<p>
+    三年时间过去的，突然想起来我可能需要修理一下网站，然后就重新的设计并编写。<br>
+    <br>
+    现在，网站能够支持音频试听下载，以及详细完善了一下内容。
+</p>
+<h2>介绍</h2>
+<p>我是constllation,玩家身份是muiclac。<br><br>
+BMS SP★9/DP☆4 点灯★17 25%<br>
+SDVX 天极段位</br>
+<br>
+无名战24生<br>
+BOF:TT Funfighter, Memory of Her,谱师 <br>
+个人一体机, 以前卫与创新为主的制作者
+<br>
+</p>
+    </div>
+</br>
+    <div id="bottom1">
+<p id="sub1">
+Constellation's Station
+<br>
+本网站由Team Constellation制作
+
+</p>
+
+    </div>
+</br>
+
 </body>
+</html>
